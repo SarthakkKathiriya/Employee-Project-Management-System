@@ -81,16 +81,7 @@ Employee, project, and dashboard routes need a bearer token. Only an admin can c
 
 ## Deployment
 
-The application uses MongoDB Atlas for the database, Render for the Express API, and Vercel for the Vite frontend.
-
-1. Create a MongoDB Atlas cluster and database user. Add the backend host's outbound IPs to the Atlas network access list (or use an appropriate restricted network policy), and copy the database connection string.
-2. In Render, create a Blueprint from this repository using `render.yaml`. Set the requested `MONGO_URI`, `ADMIN_PASSWORD` (at least 6 characters), and a temporary `CLIENT_URL` such as `http://localhost:5173`. Render generates `JWT_SECRET`.
-3. After Render deploys, copy the API service URL, for example `https://employee-project-management-api.onrender.com`.
-4. Import the repository into Vercel with the client directory (`client`) as the Root Directory. Set `VITE_API_URL` to the Render API URL ending in `/api`, for example `https://employee-project-management-api.onrender.com/api`. Deploy the frontend and copy its public URL.
-5. In Render, update `CLIENT_URL` to the exact Vercel origin (for example, `https://your-project.vercel.app`) and redeploy the API if prompted.
-6. Sign in with `admin@gmail.com` and the private `ADMIN_PASSWORD` configured in Render.
-
-Never place real connection strings, passwords, or JWT secrets in source control. The `client/vercel.json` rewrite supports client-side routes.
+Deployment is not configured. Follow the setup instructions above to run the application locally.
 
 Run `npm run lint` and `npm run build` in the client folder for the available client checks.
 
