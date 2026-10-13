@@ -1,0 +1,190 @@
+#root {
+  min-height: 100vh;
+}
+
+.auth-page,
+.app-page,
+.page-message {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 24px;
+}
+
+.auth-page {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.auth-panel {
+  max-width: 420px;
+  width: 100%;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+.top-bar {
+  align-items: center;
+  border-bottom: 1px solid #d9dee7;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.muted,
+.page-note {
+  color: #596579;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  font-size: 0.95rem;
+  gap: 6px;
+}
+
+input {
+  border: 1px solid #aeb8c7;
+  border-radius: 6px;
+  font: inherit;
+  padding: 10px;
+  width: 100%;
+}
+
+input:focus,
+button:focus-visible {
+  outline: 3px solid #9fc6ff;
+  outline-offset: 2px;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.primary-button,
+.secondary-button,
+.text-button,
+.tab {
+  border-radius: 6px;
+  padding: 9px 13px;
+}
+
+.primary-button {
+  background: #2459a6;
+  border: 1px solid #2459a6;
+  color: white;
+}
+
+.secondary-button,
+.tab {
+  background: white;
+  border: 1px solid #aeb8c7;
+  color: #273449;
+}
+
+.text-button {
+  background: transparent;
+  border: 0;
+  color: #2459a6;
+  margin-top: 12px;
+  padding-left: 0;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.active-tab {
+  background: #e8f0fc;
+  border-color: #2459a6;
+  color: #173f7b;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat strong {
+  font-size: 1.7rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 650px;
+  text-align: left;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e1e5ec;
+  padding: 10px 8px;
+}
+
+th {
+  color: #465267;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  color: #a22b2b;
+}
+
+.page-note {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .auth-page,
+  .app-page,
+  .page-message {
+    padding: 16px;
+  }
+
+  .top-bar {
+    align-items: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
